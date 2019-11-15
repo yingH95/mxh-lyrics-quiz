@@ -91,7 +91,12 @@ svg circle {
   stroke-width: 3px;
   stroke: white;
   fill: none;
-  animation: countdown 5s linear infinite forwards;
+}
+circle.easy {
+  animation: countdown 20s linear infinite forwards;
+}
+circle.hard {
+  animation: countdown 10s linear infinite forwards;
 }
 
 @keyframes countdown {

@@ -12,17 +12,17 @@
         </div>
         <div v-if="quizStatus === 'selectMode'">
             <div class="row">
-                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(10)">普通</div>
+                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(20)">普通</div>
             </div>
             <div class="row">
-                <div class="button6 col" style="background-color: lightcoral" @click="startQuiz(5)">困难</div>
+                <div class="button6 col" style="background-color: lightcoral" @click="startQuiz(10)">困难</div>
             </div>
         </div>
         <div v-if="quizStatus === 'during'" class="question-text m-2">
             <h5>得分：{{score}}</h5>
             <div class="m-2 mb-4">
                 <svg :key="currentQuestion">
-                    <circle r="18" cx="20" cy="20" ></circle>
+                    <circle r="18" cx="20" cy="20" :class="timerMode === 20?'easy':'hard'"></circle>
                 </svg>
                 <div>{{countdown}}</div>
             </div>
