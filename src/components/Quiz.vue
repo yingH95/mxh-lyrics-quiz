@@ -103,6 +103,7 @@
           this.timer()
         } else if (this.currentQuestion === (this.lyrics.length - 1)) {
           this.quizStatus = 'post';
+          this.sendAnalytics();
         }
       },
       timer: function () {
@@ -132,6 +133,13 @@
         this.quizStatus = 'pre';
         this.score = 0;
         this.currentQuestion = 0;
+      },
+      sendAnalytics: function () {
+        this.$ga.event({
+          eventCategory: 'CompleteQuiz',
+          eventAction: 'completed',
+          eventLabel: this.score
+        })
       }
     }
   }
