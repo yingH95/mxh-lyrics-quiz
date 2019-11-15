@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Quiz class="mb-auto mt-5"></Quiz>
+    <div>
+      <p class="text-light">
+        如有疑问或提议请发送邮件至：mxhcpstories@yahoo.com
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Quiz from './components/Quiz'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Quiz
   }
 }
 </script>
 
 <style>
 #app {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: cornflowerblue;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>
