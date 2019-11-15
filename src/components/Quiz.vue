@@ -12,7 +12,7 @@
         </div>
         <div v-if="quizStatus === 'selectMode'">
             <div class="row">
-                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(10)">容易</div>
+                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(10)">普通</div>
             </div>
             <div class="row">
                 <div class="button6 col" style="background-color: lightcoral" @click="startQuiz(5)">困难</div>
@@ -27,7 +27,7 @@
                 <div>{{countdown}}</div>
             </div>
             <h3>第{{currentQuestion+1}}道题</h3>
-            <p class="m-2">{{question}}</p>
+            <p class="m-2" style="white-space: pre-line">{{question}}</p>
             <div v-for="(opt, index) in options" :key="index">
                 <div class="button6 options m-1" @click="chooseAns(opt)">
                     <strong style="color: darkslategray">{{['A', 'B', 'C'][index]}} {{opt}}</strong>
@@ -52,7 +52,7 @@
     data: function () {
       return {
         lyrics: [],
-        mode: 'normal',
+        language: 'chinese',
         timerMode: 10,
         currentQuestion: 0,
         score: 0,
@@ -128,7 +128,7 @@
       resetPage: function () {
         this.clearTimer();
         this.sound.play();
-        this.lyrics = lyrics[this.mode].sort(() => Math.random() - 0.5).slice(0, 10);
+        this.lyrics = lyrics[this.language].sort(() => Math.random() - 0.5).slice(0, 10);
         this.quizStatus = 'pre';
         this.score = 0;
         this.currentQuestion = 0;

@@ -3,7 +3,7 @@
     <Quiz class="mb-auto mt-5"></Quiz>
     <div>
       <p class="text-light">
-        如有疑问或提议请发送邮件至：mxhcpstories@yahoo.com
+        如有疑问/提议/抓Bug请发送邮件至：mxhcpstories@yahoo.com
       </p>
     </div>
   </div>
