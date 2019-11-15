@@ -8,7 +8,15 @@
                 </div>
                 <p class="m-2">制作: 驼驼</p>
             </div>
-            <div class="button6" @click="startQuiz">开始游戏</div>
+            <div class="button6" @click="quizStatus = 'selectMode'">开始游戏</div>
+        </div>
+        <div v-if="quizStatus === 'selectMode'">
+            <div class="row">
+                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(10)">容易</div>
+            </div>
+            <div class="row">
+                <div class="button6 col" style="background-color: lightcoral" @click="startQuiz(5)">困难</div>
+            </div>
         </div>
         <div v-if="quizStatus === 'during'" class="question-text m-2">
             <h5>得分：{{score}}</h5>
@@ -45,6 +53,7 @@
       return {
         lyrics: [],
         mode: 'normal',
+        timerMode: 10,
         currentQuestion: 0,
         score: 0,
         quizStatus: "pre",
@@ -80,7 +89,9 @@
       }
     },
     methods: {
-      startQuiz: function () {
+      startQuiz: function (timerMode) {
+        this.timerMode = timerMode;
+        this.countdown = timerMode;
         this.sound.play();
         this.quizStatus = 'during';
         this.timer();
@@ -105,7 +116,7 @@
       },
       clearTimer: function () {
         clearTimeout(this.countdownInterval);
-        this.countdown = 5;
+        this.countdown = this.timerMode;
       },
       chooseAns: function (opt) {
         this.sound.play();
