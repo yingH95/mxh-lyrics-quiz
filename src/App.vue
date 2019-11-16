@@ -2,8 +2,12 @@
   <div id="app">
     <Quiz class="mb-auto mt-5"></Quiz>
     <div>
-      <p class="text-light">
-        如有疑问/提议/抓Bug请发送邮件至：mxhcpstories@yahoo.com
+      <p class="text-light small">
+        如有疑问/提议/抓Bug请发送邮件至：mxhcpstories@yahoo.com<br>
+        欢迎合作，一起开发！<br>
+        <a href="https://github.com/yingH95" style="color: lightyellow;text-decoration: underline">
+          @github.com/yingH95
+        </a>
       </p>
     </div>
   </div>

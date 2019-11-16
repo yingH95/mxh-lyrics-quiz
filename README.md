@@ -1,5 +1,7 @@
 # mxh-lyrics-quiz
 
+## Demo 游戏入口: https://yingh95.github.io/mxh-lyrics-quiz/
+
 ## Project setup
 ```
 npm install
