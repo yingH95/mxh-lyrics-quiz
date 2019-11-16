@@ -6,17 +6,31 @@
                 <div class="p-2 board">
                     <h1 class="font-weight-bold" style="color: white;">提词器</h1>
                 </div>
+                <span class="badge badge-warning">更新：外语版歌词上线</span>
                 <p class="m-2">制作: 驼驼</p>
             </div>
-            <div class="button6" @click="quizStatus = 'selectMode'">开始游戏</div>
+            <div class="button6" @click="quizStatus = 'selectMode'">进入游戏</div>
         </div>
         <div v-if="quizStatus === 'selectMode'">
+            <h3 class="mt-3">选择语言</h3>
             <div class="row">
-                <div class="button6 col" style="background-color: lightgoldenrodyellow" @click="startQuiz(20)">普通</div>
+                <div class="button6 mode col" @click="language = 'chinese'"
+                     :class="language === 'chinese'?'selected':null">
+                    中文
+                </div>
+                <div class="button6 mode col" @click="language = 'other'"
+                     :class="language === 'other'?'selected':null">
+                    Other
+                </div>
             </div>
+            <h3 class="mt-3">选择难度</h3>
             <div class="row">
-                <div class="button6 col" style="background-color: lightcoral" @click="startQuiz(10)">困难</div>
+                <div class="button6 mode col" @click="timerMode = 20"
+                     :class="timerMode === 20?'selected':null">普通</div>
+                <div class="button6 mode col" @click="timerMode = 10"
+                     :class="timerMode === 10?'selected':null">困难</div>
             </div>
+            <div class="button6 mt-4" @click="startQuiz()">开始游戏</div>
         </div>
         <div v-if="quizStatus === 'during'" class="question-text m-2">
             <h5>得分：{{score}}</h5>
@@ -30,7 +44,7 @@
             <p class="m-2" style="white-space: pre-line">{{question}}</p>
             <div v-for="(opt, index) in options" :key="index">
                 <div class="button6 options m-1" @click="chooseAns(opt)">
-                    <strong style="color: darkslategray">{{['A', 'B', 'C'][index]}} {{opt}}</strong>
+                    <strong style="color: darkslategray">{{['A.', 'B.', 'C.'][index]}} {{opt}}</strong>
                 </div>
             </div>
         </div>
@@ -53,7 +67,7 @@
       return {
         lyrics: [],
         language: 'chinese',
-        timerMode: 10,
+        timerMode: 20,
         currentQuestion: 0,
         score: 0,
         quizStatus: "pre",
@@ -89,9 +103,9 @@
       }
     },
     methods: {
-      startQuiz: function (timerMode) {
-        this.timerMode = timerMode;
-        this.countdown = timerMode;
+      startQuiz: function () {
+        this.countdown = this.timerMode;
+        this.lyrics = lyrics[this.language].sort(() => Math.random() - 0.5).slice(0, 10);
         this.sound.play();
         this.quizStatus = 'during';
         this.timer();
@@ -129,7 +143,9 @@
       resetPage: function () {
         this.clearTimer();
         this.sound.play();
-        this.lyrics = lyrics[this.language].sort(() => Math.random() - 0.5).slice(0, 10);
+        this.language = 'chinese';
+        this.timerMode = 20;
+        this.lyrics = '';
         this.quizStatus = 'pre';
         this.score = 0;
         this.currentQuestion = 0;
@@ -155,4 +171,12 @@
     border-width: 5px;
     border-color: darkgrey;
 }
+.mode {
+    background-color: lavender;
+}
+.selected {
+    background-color: slateblue;
+    color: whitesmoke;
+}
+
 </style>

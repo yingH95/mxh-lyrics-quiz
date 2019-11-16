@@ -87,9 +87,9 @@
       "answer": "我怎么能相信"
     },
     {
-      "lyrics": "我已是满怀疲惫，眼里是酸楚的泪，\n那故乡的风和故乡的云，_____。",
-      "options": ["为我抹去创痕", "为我抚平创伤", "为我拂去悲伤"],
-      "answer": "为我抹去创痕"
+      "lyrics": "_______，_______。\n当世界再不管，有没有真相。\n我陪着你，只有忘情的痴狂。",
+      "options": ["此刻已经该结束了吗，从此我们将遥遥相望", "这样就算是诀别了吗，从此我们将天各一方", "我们要不要像孩子一样，看看谁比谁更加坚强"],
+      "answer": "此刻已经该结束了吗，从此我们将遥遥相望"
     },
     {
       "lyrics": "_______，_______。\n无声的岁月飘然去，心中的温情永不减。",
@@ -104,19 +104,80 @@
   ],
   "other": [
     {
-      "lyrics": "Libiamo, amore fra I calici. ___________.",
-      "options": ["Più caldi baci avrà.", "Che la belleza infiora.", "Il tempo mio giocondo."],
-      "answer": "Più caldi baci avrà."
+      "lyrics": "Libiamo, amore fra I calici. Più caldi ______.\n(饮酒歌)",
+      "options": ["baci avrà.", "infiora.", "mio giocondo."],
+      "answer": "baci avrà."
     },
     {
-      "lyrics": "她轻轻唱起来，宛如天籁。让我的梦似翅膀心似海。心似海身如尘埃，_______。",
-      "options": ["梦醒来，她却已走开", "天边外，她早已不在", "天边外，她却已走开"],
-      "answer": "梦醒来，她却已走开"
+      "lyrics": "Ah-ah, la vita.\nChe cosa di più vero esiste ___.\n(La Vita)",
+      "options": ["al mondo", "c'è niente", "non lo sa"],
+      "answer": "al mondo"
     },
     {
-      "lyrics": "她轻轻唱起来，宛如天籁。让我的梦似翅膀心似海。心似海身如尘埃，_______。",
-      "options": ["梦醒来，她却已走开", "天边外，她早已不在", "天边外，她却已走开"],
-      "answer": "梦醒来，她却已走开"
+      "lyrics": "And can you feel the love tonight?\nIt is where we are.\nIt's enough for this _____,\nThat we've got this far.\n(Can you feel the love tonight)",
+      "options": ["wide-eyed wanderer", "kings and vagabonds", "restless warrior"],
+      "answer": "wide-eyed wanderer"
+    },
+    {
+      "lyrics": "You'll be my king, and I'll be your ___.\nNo, you be my queen, and I'll be your ___.\n(I'll Cover You)",
+      "options": ["castle; moat", "moat; castle", "capsule; coat"],
+      "answer": "castle; moat"
+    },
+    {
+      "lyrics": "Someday, I wish upon a star,\nWake up where the _____ are far behind me.\n(Somewhere over the rainbow)",
+      "options": ["clouds", "clothes", "colors"],
+      "answer": "clouds"
+    },
+    {
+      "lyrics": "Impossible comes true, _______ you\nOh, this is the greatest show\n(The Greatest Show)",
+      "options": ["intoxicating", "introducing", "intriguing"],
+      "answer": "intoxicating"
+    },
+    {
+      "lyrics": "Think of me, think of me ____\nWhen we've said goodbye\n(Think of Me)",
+      "options": ["fondly", "friendly", "firmly"],
+      "answer": "fondly"
+    },
+    {
+      "lyrics": "Por una cabeza, todas _____\nSu boca que besa.\n(Por una cabeza)",
+      "options": ["las locuras", "de un día", "me olvida"],
+      "answer": "las locuras"
+    },
+    {
+      "lyrics": "J'ai sa flamme,\net j'ai sa main!\nJour _____! Me voici\n(Ah Mes Amis)",
+      "options": ["prospère", "militaire", "destin"],
+      "answer": "prospère"
+    },
+    {
+      "lyrics": "People _____ without _____\nPeople _____ without _____\nPeople writing songs that voices never share\n(Sound of Silence)",
+      "options": ["talking; speaking; hearing; listening", "speaking; hearing; talking; listening", "talking; listening; hearing; speaking"],
+      "answer": "talking; speaking; hearing; listening"
+    },
+
+    {
+      "lyrics": "Les rois du monde vivent _____\nIls ont la plus belle vue mais y'a un mais\n(世界之王)",
+      "options": ["au sommet", "veulent", "de tout"],
+      "answer": "au sommet"
+    },
+    {
+      "lyrics": "Daylight\nI must wait for the _____\nI must think of a new life\n(Memory)",
+      "options": ["sunrise", "sunset", "sunshine"],
+      "answer": "sunrise"
+    },
+    {
+      "lyrics": "Ora lo sai, tu sei il mio ____ grande amore.\n(Grande Amore)",
+      "options": ["unico", "musico", "fantico"],
+      "answer": "unico"
+    },
+    {
+      "lyrics": "Ma limpido è il _____\ntra i campi odor di vino\n(Melodramma)",
+      "options": ["mattino", "adesso", "mulino"],
+      "answer": "mattino"
+    },
+    {
+      "lyrics": "Who are we? \nJust a speck of dust within the ____?\nWoe is me, \nif we're not careful turns into reality\n(Lost Stars)",
+      "options": ["galaxy", "universe", "gravity"],
+      "answer": "galaxy"
     }
   ]
 }
