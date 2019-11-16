@@ -153,8 +153,8 @@
       sendAnalytics: function () {
         this.$ga.event({
           eventCategory: 'CompleteQuiz',
-          eventAction: 'completed',
-          eventLabel: this.score
+          eventAction: 'completed ' + this.language,
+          eventLabel: this.score,
         })
       }
     }
